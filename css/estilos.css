@@ -198,6 +198,8 @@
 
 
 /*aqui arme la galeria*/
+
+.gale{ padding-left: 60px; }
 section {
     width: 90%;
     margin: 0 auto;

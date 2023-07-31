@@ -1,0 +1,14 @@
+{
+  "name": "proyectohostal",
+  "version": "1.0.0",
+  "description": "proyecto de coder hostal",
+  "main": "index.js",
+  
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnabelMarisa/proyecto_42980.git "
+  },
+  "author": "Anabel",
+  "license": "ISC"
+}

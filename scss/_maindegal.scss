@@ -1,0 +1,53 @@
+
+/*aqui arme la galeria*/
+
+.habitacion {
+    margin-left: 70px; 
+    margin-top: map-get($sizes, 50); 
+    margin-bottom: map-get($sizes, 20);  
+  }
+  
+  section {
+      width: 90%;
+      margin: 0 auto;
+      height: 85vh;
+      background: $color-blanco;
+      display: $contenedor-flex;
+      justify-content: center;
+      align-items: $texto-alineado;
+      border: solid #6c757d;
+  }
+  
+  
+  section img {
+      width: 0px;
+      height: 100%;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: .5s ease;
+  }
+  
+  section img:hover {
+      cursor: crosshair;
+      width: 30%;
+      opacity: 1;
+      filter: contrast(120%);
+  }
+  
+  @media screen and (max-width: 768px) {
+      section {
+          flex-wrap: wrap;
+      }
+  
+      section img {
+          height: 80%;
+      }
+  
+      section img:hover {
+  
+          width: 70%;
+      }
+  
+    }
+  

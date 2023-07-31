@@ -1,0 +1,16 @@
+
+  /*color del footer*/
+  .custom-color {
+    background-color: #455A64;
+  }
+  
+    .spacer {
+    margin-bottom: map-get($sizes, 30); 
+    }
+  
+    .titulo-footer {
+    font-size: map-get($sizes, uno); 
+    font-weight: bold;
+  
+      }
+  

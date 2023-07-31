@@ -1,0 +1,12 @@
+
+  
+  @mixin bordee-redondo($radio) {
+    border-radius: $radio;
+    
+}
+
+@mixin sizes ($width, $height){
+  height: $height;
+  width: $width;
+  
+}

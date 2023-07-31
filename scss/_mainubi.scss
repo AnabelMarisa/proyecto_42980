@@ -1,0 +1,54 @@
+
+  /*aqui arme el como llegar con card con bootstrap, cambie la palabra jugo porque me pisaba las card del descubre granada y me cambiaba todo*/
+
+
+  .jugo {
+    height: map-get($sizes, 300);
+    width: map-get($sizes, 300);
+  
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .jugo-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  
+  }
+  
+  .jugo:hover .jugo-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .jugo-front,
+  .jugo-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: $contenedor-flex;
+    align-items: $texto-alineado;
+    justify-content: center;
+    padding: map-get($sizes, 20); 
+    color: #fff;
+  }
+  
+  .jugo-front {
+    background-color: $color-primario;
+  }
+  
+  .jugo-back {
+    background-color: #CFD8DC;
+    transform: rotateY(180deg);
+    font-size: map-get($sizes, 14); 
+    text-align: $texto-alineado;
+  }
+  
+  .jugo i {
+    font-size: map-get($sizes, 100); 
+  }
+  
+  

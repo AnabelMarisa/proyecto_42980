@@ -1,0 +1,45 @@
+
+/*descubre granada*/
+
+.custom-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+
+
+     /*contacto boton*/
+     .btn-primary{
+
+        background-color: $color-primario;
+        border-color: $color-blanco;
+    
+      }
+    
+      
+      .btn-primary:hover {
+        color: $color-blanco;
+        background-color: $color-negro;
+        border-color: $color-blanco;
+    
+    
+        
+      }
+
+      /*el icono de whatsapp*/
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: map-get($sizes, 30); 
+    right: map-get($sizes, 30); 
+    z-index: 9999;
+    font-size: map-get($sizes, 50); 
+      .colowha {
+        color: $color-verde;
+  
+     }
+  }
+
+
+

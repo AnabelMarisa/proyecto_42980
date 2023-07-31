@@ -1,0 +1,60 @@
+
+
+.carousel-image {
+    object-fit: cover;
+    height: 100%;
+}
+
+.carousel-item {
+    height: 60vh;
+    width: 100%;
+}
+
+
+.container {
+    display: $contenedor-flex;
+    align-items: $texto-alineado;
+    
+    
+}
+
+
+.image {
+    width: map-get($sizes, 300);
+    /* Ajusto la imagen de la fachada */
+    height: auto;
+    margin-left: 80px;
+    margin-bottom: map-get($sizes, 50);
+
+}
+
+
+
+/* Iconos de servicios */
+
+.services-section {
+    background-color: #FFFFFF;
+    padding: map-get($sizes, 50) 0;
+}
+
+.services-section h2 {
+    text-align: $texto-alineado;
+    margin-bottom: 30px;
+}
+
+.services-section .icon {
+    font-size: map-get($sizes, 40); 
+    margin-bottom: map-get($sizes, 20); 
+
+}
+
+.services-section .service {
+    text-align: $texto-alineado;
+    margin-bottom: map-get($sizes, 40);
+}
+
+@media (max-width: 767px) {
+    .services-section .service {
+        margin-bottom: map-get($sizes, 20); 
+    }
+}

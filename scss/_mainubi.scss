@@ -51,4 +51,21 @@
     font-size: map-get($sizes, 100); 
   }
   
+
+  @media (max-width: 767px) {
+    .jugo {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+}
+
+  
+
+
   

@@ -1,18 +1,384 @@
-/* Error: Undefined mixin.
- *    ,
- * 25 |     @include bordee-redondo(5px); 
- *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss\_header.scss 25:5  @import
- *   scss\estilos.scss 8:9   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 25 \2502      @include bordee-redondo(5px); \d\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\_header.scss 25:5  @import\a   scss\\estilos.scss 8:9   root stylesheet";
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,200;0,400;0,800;1,400 & display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/*descubre granada*/
+.custom-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/*contacto boton*/
+.btn-primary {
+  background-color: #607D8B;
+  border-color: white;
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
+/*el icono de whatsapp*/
+.whatsapp-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  font-size: 50px;
+}
+.whatsapp-icon .colowha {
+  color: #00bb2d;
+}
+
+.carousel-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-item {
+  height: 60vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 300px;
+  /* Ajusto la imagen de la fachada */
+  height: auto;
+  margin-left: 80px;
+  margin-bottom: 50px;
+}
+
+/* Iconos de servicios */
+.services-section {
+  background-color: #FFFFFF;
+  padding: 50px 0;
+}
+
+.services-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services-section .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.services-section .service {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .services-section .service {
+    margin-bottom: 20px;
+  }
+}
+/*aqui arme la galeria*/
+.habitacion {
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+  height: 85vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid #6c757d;
+}
+
+section img {
+  width: 0px;
+  height: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+section img:hover {
+  cursor: crosshair;
+  width: 30%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-wrap: wrap;
+  }
+  section img {
+    height: 80%;
+  }
+  section img:hover {
+    width: 70%;
+  }
+}
+/*aqui arme el como llegar con card con bootstrap, cambie la palabra jugo porque me pisaba las card del descubre granada y me cambiaba todo*/
+.jugo {
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.jugo-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.jugo:hover .jugo-inner {
+  transform: rotateY(180deg);
+}
+
+.jugo-front,
+.jugo-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.jugo-front {
+  background-color: #607D8B;
+}
+
+.jugo-back {
+  background-color: #CFD8DC;
+  transform: rotateY(180deg);
+  font-size: 14px;
+  text-align: center;
+}
+
+.jugo i {
+  font-size: 100px;
+}
+
+.navbar-light .navbar-nav .colorWhite {
+  color: #F5F5F5;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  background-color: #607D8B;
+  backdrop-filter: blur(10px);
+  margin-right: 2px;
+  transition: all ease-in-out 0.5s;
+}
+
+/*voy a probar la animacion de reserva ahora*/
+.animated-button1 {
+  background: linear-gradient(-30deg, #759AA2 50%, #4A6B78 50%);
+  padding: 10px 20px;
+  margin: 12px;
+  border-radius: 5px;
+  display: inline-block;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.animated-button1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out;
+}
+
+.animated-button1:hover::before {
+  opacity: 0.2;
+}
+
+.animated-button1:hover {
+  color: black;
+}
+
+.animated-button1 span {
+  position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-linear-gradient(top, #4A6B78, #607D8B, #607D8B, #FFFFFF);
+  background: linear-gradient(to bottom, #4A6B78, #607D8B, #607D8B, #FFFFFF);
+  -webkit-animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
+}
+
+@keyframes animateTop {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.animated-button1 span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-linear-gradient(top, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  background: linear-gradient(to bottom, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  -webkit-animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+.animated-button1 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-linear-gradient(top, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  background: linear-gradient(to bottom, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  -webkit-animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+.animated-button1 span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-linear-gradient(top, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  background: linear-gradient(to bottom, #FFFFFF, #FDFDFD, #FAFAFA, #F7F7F7);
+  -webkit-animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+/* Estilo para pantallas con un ancho máximo de 768px o menos */
+@media screen and (max-width: 768px) {
+  .animated-button1 {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+/*el video del header*/
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.logo {
+  width: 100px;
+  height: 80px;
+}
+
+/* Estilo para pantallas con un ancho máximo de 768px o menos */
+@media (max-width: 767px) {
+  .video-container video {
+    display: none; /* Ocultar el video en pantallas pequeñas */
+  }
+  .video-container {
+    content: "";
+    display: block;
+    background-image: url(../assets/img/alhambradron.jpg);
+    width: 100%;
+    background-size: contain;
+    padding-top: 56.25%;
+  }
+}
+/*color del footer*/
+.custom-color {
+  background-color: #455A64;
+}
+
+.spacer {
+  margin-bottom: 30px;
+}
+
+.titulo-footer {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=estilos.css.map */

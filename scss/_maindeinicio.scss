@@ -1,8 +1,9 @@
 
-
 .carousel-image {
     object-fit: cover;
     height: 100%;
+
+
 }
 
 .carousel-item {
@@ -18,6 +19,12 @@
     
 }
 
+.carousel-inner img {
+    max-height: 100%;
+    width: auto;
+  }
+
+
 
 .image {
     width: map-get($sizes, 300);
@@ -25,7 +32,17 @@
     height: auto;
     margin: 0 auto;
     margin-bottom: map-get($sizes, 50);
+    
+}
 
+@media (max-width: 767px) {
+    .image {
+        
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    
+    }
 }
 
 

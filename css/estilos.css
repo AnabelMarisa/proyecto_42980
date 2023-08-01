@@ -63,6 +63,11 @@
   align-items: center;
 }
 
+.carousel-inner img {
+  max-height: 100%;
+  width: auto;
+}
+
 .image {
   width: 300px;
   /* Ajusto la imagen de la fachada */
@@ -71,6 +76,13 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 767px) {
+  .image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 /* Iconos de servicios */
 .services-section {
   background-color: #FFFFFF;
@@ -142,6 +154,10 @@ section img:hover {
     width: 70%;
   }
 }
+.card-title {
+  font-size: 20px;
+}
+
 /*aqui arme el como llegar con card con bootstrap, cambie la palabra jugo porque me pisaba las card del descubre granada y me cambiaba todo*/
 .jugo {
   height: 300px;
@@ -351,12 +367,11 @@ section img:hover {
     height: 30px;
     width: 160px;
   }
-}
-/*el video del header*/
+} /*el video del header*/
 .video-container {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 40%;
 }
 
 .video-container video {
@@ -392,16 +407,7 @@ section img:hover {
     background-image: url(../assets/img/alhambradron\ copia.jpg);
     width: 100%;
     background-size: cover;
-    padding-top: 56.25%;
-  }
-}
-/* Estilo para pantallas con un ancho máximo de 768px o menos */
-@media (max-width: 767px) {
-  .titumov .text-center .text-white .display-4 {
-    color: black !important;
-  }
-  .parramov .text-center .text-white .display-4 {
-    color: black !important;
+    padding-top: 70%;
   }
 }
 /*color del footer*/

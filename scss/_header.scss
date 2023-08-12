@@ -10,12 +10,16 @@
       backdrop-filter: blur(10px);
       margin-right: map-get($sizes, 2); 
       transition: all ease-in-out 0.5s;
+     
   
       }
     }
   }
 
-  
+.container{
+  margin-bottom: 0;
+}
+
 /*voy a probar la animacion de reserva ahora*/
 
 .animated-button1 {

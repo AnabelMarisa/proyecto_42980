@@ -12,9 +12,7 @@
       margin: 0 auto;
       height: 85vh;
       background: $color-blanco;
-      display: $contenedor-flex;
-      justify-content: center;
-      align-items: $texto-alineado;
+      @extend .nuevo;
       border: solid #6c757d;
   }
   

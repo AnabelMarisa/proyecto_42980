@@ -1,6 +1,126 @@
 
-
-.card-title {
-  font-size: map-get($sizes, 20); 
+.titu {
+    
+    margin-top: map-get($sizes, 20);
+    margin-bottom: map-get($sizes, 30);
 
 }
+  
+.nuevo {
+    display: $contenedor-flex;
+    justify-content: $texto-alineado;
+    align-items: $texto-alineado;
+
+
+}
+
+.ciudad{
+
+    background: linear-gradient(45deg, rgb(138, 233, 138) , #8099AB);  
+     
+
+}
+
+.container {
+    position: relative;
+    display: $contenedor-flex;
+    justify-content: $texto-alineado;
+    align-items: $texto-alineado;
+    flex-wrap: wrap;
+    gap: map-get($sizes, 30);
+    padding: 0 auto;
+    margin-bottom: map-get($sizes, 30);
+}
+
+.container .tarjeta {
+    position: relative;
+    display: $contenedor-flex;
+    justify-content: $texto-alineado;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    @include borde-redondeado(20px);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: height 0.5s;
+    margin-bottom: map-get($sizes, 30);
+    
+}
+
+.container .tarjeta:hover {
+    height: map-get($sizes, 400);
+}
+
+.container .tarjeta .ImgBx {
+    position: absolute;
+    top: map-get($sizes, 20);
+    width: map-get($sizes, 300);
+    height: map-get($sizes, 220);
+    background: #333;
+    @include borde-redondeado(12px);
+    overflow: hidden;
+    transition: 0.5s;
+
+    
+}
+
+.container .tarjeta:hover .ImgBx {
+    top: -100px;
+    transform: scale(0.75);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .tarjeta .ImgBx img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+
+.container .tarjeta .content 
+{
+
+position: absolute;
+top: map-get($sizes, 252);
+width: 100%;
+height: map-get($sizes, 35);
+overflow: hidden;
+text-align: $texto-alineado;
+padding: 0 0.30px;
+transition: 0.5s;
+
+}
+
+
+.container .tarjeta:hover .content 
+{
+    top: map-get($sizes, 130);
+    height: map-get($sizes, 250);
+}
+
+.conteiner .tarjeta .content h2
+{
+    font-size: 1em;
+    font-weight: 700;
+
+}
+
+.btn-primary
+{
+    position: relative;
+    top:map-get($sizes, 15);
+    display: inline-block;
+    padding: map-get($sizes, 10) map-get($sizes, 15);
+    background-color: $color-primario;
+    color: $color-blanco;
+    font-weight: 500;
+    @include borde-redondeado(8px);
+    text-decoration: none;
+
+
+}
+
+ 

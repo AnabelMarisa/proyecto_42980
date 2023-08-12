@@ -52,3 +52,9 @@
     display: block;
     margin: 0 auto;
   }
+
+  .form-control{
+    margin-bottom: 30px;
+    @include borde-redondeado(8px);
+  }
+  

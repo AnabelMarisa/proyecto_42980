@@ -1,11 +1,20 @@
 
+.mapa{
+
+  width: 800px;
+  height:  map-get($sizes, 300);
+  @include borde-redondeado(12px);
+
+}
+
+
   /*aqui arme el como llegar con card con bootstrap, cambie la palabra jugo porque me pisaba las card del descubre granada y me cambiaba todo*/
 
 
   .jugo {
     height: map-get($sizes, 300);
     width: map-get($sizes, 300);
-  
+    
     perspective: 1000px;
     cursor: pointer;
   }
@@ -29,11 +38,10 @@
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    display: $contenedor-flex;
-    align-items: $texto-alineado;
-    justify-content: center;
+    @extend .nuevo;
     padding: map-get($sizes, 20); 
     color: #fff;
+    @include borde-redondeado(5px);
   }
   
   .jugo-front {
